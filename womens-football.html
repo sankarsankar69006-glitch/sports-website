@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore top women's football leagues including WSL, Liga F, NWSL, and Frauen-Bundesliga on PlayZone.">
+
+    <title>Women's Football | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./womens-football.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="./index.html" class="logo">
+            <i class="fa-solid fa-fire"></i>
+            <span>PlayZone</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./leagues.html">Leagues</a>
+            <a href="./players.html">Players</a>
+            <a href="./news.html">News & Analysis</a>
+        </div>
+
+        <a href="./index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Home
+        </a>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="women-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <span class="eyebrow">
+                <i class="fa-solid fa-futbol"></i>
+                THE WOMEN'S GAME
+            </span>
+
+            <h1>
+                Women's<br>
+                <span>Football</span>
+            </h1>
+
+            <p>
+                Discover the teams, celebrate the legends,
+                and explore the competitions shaping women's football
+                around the world.
+            </p>
+
+            <a href="#women-leagues" class="hero-btn">
+                Explore Leagues
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- LEAGUES SECTION -->
+    <main>
+
+        <section class="league-section" id="women-leagues">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">EXPLORE THE GAME</span>
+                    <h2>Women's <span>Leagues</span></h2>
+                    <p>
+                        From domestic rivalries to the biggest
+                        continental competitions.
+                    </p>
+                </div>
+
+                <span class="league-count">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span id="league-count">06</span> COMPETITIONS
+                </span>
+            </div>
+
+
+            <!-- LEAGUE CARDS -->
+            <div class="league-grid" id="league-grid">
+
+                <!-- JavaScript creates league cards here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- TEAMS SECTION -->
+        <section class="teams-section" id="women-teams" hidden>
+
+            <div class="teams-heading">
+
+                <div>
+                    <span class="section-label">MEET THE CLUBS</span>
+                    <h2 id="selected-league-title">League Teams</h2>
+                    <p id="selected-league-description">
+                        Explore the clubs competing in this competition.
+                    </p>
+                </div>
+
+                <button class="back-leagues" id="back-leagues">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    All Leagues
+                </button>
+
+            </div>
+
+            <div class="team-grid" id="team-grid">
+                <!-- JavaScript creates team cards here -->
+            </div>
+
+            <p class="team-count" id="team-count"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- TEAM DETAILS MODAL -->
+    <div class="modal" id="team-modal" aria-hidden="true">
+
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <div class="modal-content" role="dialog"
+             aria-modal="true" aria-labelledby="modal-team-name">
+
+            <button class="modal-close" id="modal-close"
+                    aria-label="Close team details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-cover" id="modal-cover">
+
+                <div class="modal-cover-overlay"></div>
+
+                <div class="modal-team-info">
+                    <span class="section-label">CLUB PROFILE</span>
+                    <h2 id="modal-team-name">Team Name</h2>
+                    <p id="modal-team-league">Competition</p>
+                </div>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p class="modal-description" id="modal-description"></p>
+
+                <div class="detail-grid">
+
+                    <div class="detail-item">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div>
+                            <span>Founded</span>
+                            <strong id="modal-founded"></strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span>Country</span>
+                            <strong id="modal-country"></strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fa-solid fa-house"></i>
+                        <div>
+                            <span>Home Stadium</span>
+                            <strong id="modal-stadium"></strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fa-solid fa-trophy"></i>
+                        <div>
+                            <span>Competition</span>
+                            <strong id="modal-competition"></strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="achievements">
+                    <h3>
+                        <i class="fa-solid fa-medal"></i>
+                        Club Highlights
+                    </h3>
+
+                    <ul id="modal-achievements"></ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="./index.html" class="logo">
+            <i class="fa-solid fa-fire"></i>
+            <span>PlayZone</span>
+        </a>
+
+        <p>Celebrating football. Inspiring every generation.</p>
+
+        <span class="copyright">
+            &copy; 2026 PlayZone. All rights reserved.
+        </span>
+    </footer>
+
+
+    <script src="./womens-football.js"></script>
+
+</body>
+</html>

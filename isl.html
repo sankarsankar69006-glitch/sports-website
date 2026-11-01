@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Indian Super League (ISL) football clubs, player rosters, league standings, and stats on PlayZone.">
+
+    <title>ISL Teams | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./isl.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="isl-hero">
+        <p class="eyebrow">INDIAN FOOTBALL</p>
+
+        <h1>Indian Super <span>League</span></h1>
+
+        <p class="hero-description">
+            Explore the clubs, stadiums and stories of Indian football.
+        </p>
+        <a href="./index.html" class="isl-home-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Home
+</a>
+    </section>
+
+    
+
+    <!-- Teams Section -->
+    <section class="teams-section">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">THE CLUBS</p>
+                <h2>ISL <span>Teams</span></h2>
+            </div>
+
+            <p class="team-count" id="teamCount"></p>
+        </div>
+
+        <div class="team-grid" id="teamGrid">
+            <!-- JavaScript-la team cards varum -->
+        </div>
+
+    </section>
+
+    <!-- Club Details Popup -->
+    <div class="details-overlay" id="detailsOverlay">
+
+        <div class="details-modal">
+
+            <button class="close-btn" id="closeDetails"
+                    aria-label="Close details">&times;</button>
+
+            <img src="" alt="" id="detailImage" class="detail-image">
+
+            <div class="detail-content">
+                <p class="eyebrow">CLUB PROFILE</p>
+
+                <h2 id="detailName"></h2>
+
+                <div class="detail-info">
+                    <p><strong>Founded:</strong>
+                        <span id="detailFounded"></span>
+                    </p>
+
+                    <p><strong>Home Stadium:</strong>
+                        <span id="detailStadium"></span>
+                    </p>
+
+                    <p><strong>City:</strong>
+                        <span id="detailCity"></span>
+                    </p>
+                </div>
+
+                <p id="detailDescription" class="detail-description"></p>
+
+                <button class="close-detail-btn" id="doneBtn">
+                    Close Details
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./isl.js"></script>
+</body>
+</html>

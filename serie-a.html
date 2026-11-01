@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Italian Serie A football clubs, league standings, player statistics, and club histories on PlayZone.">
+
+    <title>Serie A Teams | PlayZone</title>
+
+    <link rel="icon" href="./assets/icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./serie-a.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Existing navbar irundha, adhai inga retain pannunga -->
+
+    <main class="serie-page">
+
+        <section class="serie-hero">
+            <span class="serie-tag">ITALIAN FOOTBALL</span>
+
+            <h1>Serie <span>A</span></h1>
+
+            <p>
+                Explore Italy's legendary clubs, iconic badges
+                and rich football traditions.
+            </p>
+
+            <div class="serie-stats">
+                <div>
+                    <strong>20</strong>
+                    <span>Clubs</span>
+                </div>
+
+                <div>
+                    <strong>38</strong>
+                    <span>Matches per club</span>
+                </div>
+
+                <div>
+                    <strong>Italy</strong>
+                    <span>Country</span>
+                </div>
+            </div>
+                <a href="./index.html" class="serie-home-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Home
+</a>
+        </section>
+
+    
+
+        <section class="serie-clubs-section">
+
+            <div class="serie-section-heading">
+                <div>
+                    <span class="serie-tag">THE CLUB DIRECTORY</span>
+                    <h2>Discover the <span>Clubs</span></h2>
+                </div>
+
+                <span class="club-count" id="clubCount">20 CLUBS</span>
+            </div>
+
+            <div class="serie-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="teamSearch"
+                    placeholder="Search club or city..."
+                >
+            </div>
+
+            <div class="serie-grid" id="serieGrid"></div>
+
+            <p class="no-clubs" id="noClubs">
+                No clubs found. Try another search.
+            </p>
+
+        </section>
+
+    </main>
+
+    
+
+    <script src="./serie-a.js"></script>
+</body>
+</html>

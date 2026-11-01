@@ -1,0 +1,861 @@
+
+/* ==========================
+   PLAYZONE WOMEN'S FOOTBALL
+========================== */
+
+:root {
+    --bg: #050D11;
+    --panel: #0B171D;
+    --panel-light: #102128;
+    --green: #48E5A1;
+    --text: #F3F7F8;
+    --muted: #A9BAC2;
+    --border: #1C2B32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    min-height: 76px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo i {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    transition: color 0.25s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 9px 15px;
+    font-size: 12px;
+    transition: 0.25s;
+}
+
+.back-home:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+
+/* HERO SECTION */
+
+.women-hero {
+    min-height: 0;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 13, 17, 0.65) 0%,
+        rgba(5, 13, 17, 0.30) 50%,
+        rgba(5, 13, 17, 0.05) 100%
+        ),
+        url("./assets/Womens/women-hero.jpg") center center / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 80% 20%,
+            rgba(72, 229, 161, 0.10),
+            transparent 45%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.eyebrow,
+.section-label {
+    display: inline-block;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.women-hero h1 {
+    font-size: clamp(44px, 6.5vw, 78px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.women-hero h1 span,
+.section-heading h2 span {
+    color: var(--green);
+}
+
+.hero-content > p {
+    max-width: 530px;
+    margin-top: 22px;
+    color: #C0CDD2;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 13px 22px;
+    background: var(--green);
+    color: #06130E;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.hero-btn:hover {
+    background: #73F0BA;
+    transform: translateY(-2px);
+}
+
+
+
+
+/* COMMON SECTIONS */
+
+.league-section,
+.teams-section {
+    padding: 75px 7%;
+}
+
+.section-heading,
+.teams-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.teams-heading h2 {
+    margin-top: 8px;
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.teams-heading h2 {
+    overflow-wrap: anywhere;
+}
+
+.section-heading p,
+.teams-heading p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.league-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.league-count i {
+    color: var(--green);
+}
+
+
+/* LEAGUE CARDS */
+
+.league-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.league-card {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--panel);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.league-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-image: var(--card-image);
+    background-position: center;
+    background-size: cover;
+
+    transition: transform 0.5s;
+}
+
+.league-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 13, 17, 0.05) 10%,
+            rgba(5, 13, 17, 0.30) 45%,
+            rgba(5, 13, 17, 0.97) 100%
+        );
+}
+
+.league-card:hover {
+    border-color: var(--green);
+    transform: translateY(-5px);
+}
+
+.league-card:hover::before {
+    transform: scale(1.07);
+}
+
+.league-card:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+}
+
+.league-card-content {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+}
+
+.league-region {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.league-card h3 {
+    margin-top: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.league-card p {
+    margin-top: 5px;
+    color: #C5D0D4;
+    font-size: 11px;
+}
+
+.league-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 11px;
+    color: #D6E0E3;
+}
+
+.league-card-footer i {
+    color: var(--green);
+    transition: transform 0.25s;
+}
+
+.league-card:hover .league-card-footer i {
+    transform: translateX(5px);
+}
+
+
+/* TEAMS SECTION */
+
+.teams-section {
+    border-top: 1px solid var(--border);
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(72, 229, 161, 0.05),
+            transparent 45%
+        );
+}
+
+.teams-section[hidden] {
+    display: none;
+}
+
+.back-leagues {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    padding: 11px 15px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 11px;
+    transition: 0.25s;
+}
+
+.back-leagues:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.team-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--panel);
+    cursor: pointer;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--green);
+}
+
+.team-card:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+}
+
+.team-image {
+    height: 165px;
+    position: relative;
+    overflow: hidden;
+    background: var(--panel-light);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.06);
+}
+
+.team-image::after {
+    content: "";
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(5, 13, 17, 0.65));
+    pointer-events: none;
+}
+
+.team-info {
+    padding: 15px;
+}
+
+.team-country {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-info h3 {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.team-founded {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.team-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: #D3DFE2;
+    font-size: 10px;
+}
+
+.team-view i {
+    color: var(--green);
+}
+
+.team-count {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: right;
+}
+
+
+/* TEAM DETAILS MODAL */
+
+/* MODAL OVERLAY */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* BACKDROP */
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(5px);
+}
+
+/* LARGE TEAM DETAILS POPUP */
+.modal-content {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    animation: modalAppear 0.25s ease;
+}
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(5, 13, 17, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.modal-cover {
+    min-height: 600px;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: end;
+    padding: 30px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--panel-light);
+}
+
+.modal-cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(5, 13, 17, 0.65),
+        rgba(5, 13, 17, 0.02)
+    );
+}
+
+.modal-team-info {
+    position: relative;
+    z-index: 1;
+}
+
+.modal-team-info h2 {
+    margin-top: 6px;
+    font-size: clamp(23px, 5vw, 32px);
+    line-height: 1.3;
+}
+
+.modal-team-info p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.modal-body {
+    padding: 25px 30px 30px;
+}
+
+.modal-description {
+    color: #CBD5D9;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 15px;
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.detail-item > i {
+    margin-top: 3px;
+    color: var(--green);
+}
+
+.detail-item span,
+.detail-item strong {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.detail-item span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.detail-item strong {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.achievements {
+    margin-top: 28px;
+}
+
+.achievements h3 {
+    font-size: 15px;
+}
+
+.achievements h3 i {
+    margin-right: 8px;
+    color: var(--green);
+}
+
+.achievements ul {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.achievements li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    color: #C7D3D7;
+    font-size: 12px;
+}
+
+.achievements li i {
+    margin-top: 4px;
+    color: var(--green);
+}
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 35px 7%;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer p,
+.copyright {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+    .league-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .nav-links {
+        gap: 17px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .back-home {
+        padding: 8px 10px;
+    }
+
+    .women-hero {
+        min-height: 470px;
+        padding: 80px 6%;
+        background-position: 60% center;
+    }
+
+    .hero-content > p {
+        max-width: 450px;
+        font-size: 12px;
+    }
+
+    .hero-tag {
+        right: 6%;
+        bottom: 20px;
+        font-size: 8px;
+    }
+
+    .league-section,
+    .teams-section {
+        padding: 55px 5%;
+    }
+
+    .section-heading,
+    .teams-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .league-count {
+        font-size: 9px;
+    }
+
+    .league-grid {
+        gap: 14px;
+    }
+
+    .league-card {
+        min-height: 230px;
+    }
+
+    .league-card-content {
+        left: 14px;
+        right: 14px;
+        bottom: 15px;
+    }
+
+    .league-card h3 {
+        font-size: 16px;
+    }
+
+    .league-card p {
+        font-size: 10px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .team-image {
+        height: 135px;
+    }
+
+    .team-info {
+        padding: 12px;
+    }
+
+    .team-info h3 {
+        font-size: 12px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-cover {
+        min-height: 200px;
+        padding: 22px;
+    }
+}
+
+@media (max-width: 380px) {
+    .league-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .league-card {
+        min-height: 245px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

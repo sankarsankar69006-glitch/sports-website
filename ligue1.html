@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore French Ligue 1 clubs, top scorers, match statistics, and team profiles on PlayZone.">
+
+    <title>Ligue 1 Teams | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./ligue1.css">
+</head>
+<body>
+
+    <section class="ligue-hero">
+        <div class="hero-content">
+            <p class="hero-label">
+                <i class="fa-solid fa-futbol"></i>
+                FRENCH FOOTBALL
+            </p>
+
+            <h1>Ligue <span>1</span></h1>
+
+            <p class="hero-description">
+                Explore French football clubs, iconic stadiums,
+                legendary players and unforgettable moments.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <h3>18</h3>
+                    <p>Clubs</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>1932</h3>
+                    <p>Founded</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>France</h3>
+                    <p>Country</p>
+                </div>
+            </div>
+
+            <a href="./index.html" class="back-home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </section>
+
+    <main class="ligue-container">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">EXPLORE THE CLUBS</p>
+                <h2>Ligue 1 <span>Clubs</span></h2>
+                <p class="section-description">
+                    Find your favourite French football club.
+                </p>
+            </div>
+
+            <div class="club-count">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span id="clubCount">18 Clubs</span>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="clubSearch"
+                   placeholder="Search club name..." autocomplete="off">
+        </div>
+
+        <div class="ligue-grid" id="ligueGrid"></div>
+
+        <div class="no-results" id="noResults">
+            <i class="fa-regular fa-face-frown"></i>
+            <h3>No Clubs Found</h3>
+            <p>Try searching with a different club name.</p>
+        </div>
+    </main>
+
+    <!-- CLUB DETAILS POPUP -->
+    <div class="club-modal" id="clubModal" aria-hidden="true">
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div class="modal-card" role="dialog" aria-modal="true"
+             aria-labelledby="modalClubName">
+
+            <button class="modal-close" id="modalClose" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-top">
+                <div class="modal-logo-wrap">
+                    <img src="" alt="Club image" id="modalLogo">
+                </div>
+
+                <div class="modal-heading">
+                    <p class="section-label">CLUB PROFILE</p>
+                    <h2 id="modalClubName">Club Name</h2>
+                    <p id="modalLocation"></p>
+                </div>
+            </div>
+
+            <div class="modal-info-grid">
+                <div class="info-box">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Founded</p>
+                    <h4 id="modalFounded"></h4>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-building"></i>
+                    <p>Stadium</p>
+                    <h4 id="modalStadium"></h4>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Nickname</p>
+                    <h4 id="modalNickname"></h4>
+                </div>
+            </div>
+
+            <div class="modal-history">
+                <h3><i class="fa-solid fa-book-open"></i> Club History</h3>
+                <p id="modalHistory"></p>
+            </div>
+
+            <div class="modal-footer">
+                <span><i class="fa-solid fa-futbol"></i> PlayZone Club Profile</span>
+                <button type="button" id="modalBackBtn">Close Details</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="ligue-footer">
+        <p>© 2026 PlayZone. Made for football fans.</p>
+    </footer>
+
+    <script src="./ligue1.js"></script>
+</body>
+</html>

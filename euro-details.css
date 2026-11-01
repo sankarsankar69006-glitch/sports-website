@@ -1,0 +1,318 @@
+
+:root {
+    --bg: #050D11;
+    --panel: #0B171D;
+    --green: #48E5A1;
+    --text: #F3F7F8;
+    --muted: #A9BAC2;
+    --border: #1C2B32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.details-hero {
+    padding: 0 7% 65px;
+    background:
+        radial-gradient(ellipse at 80% 70%, #15372E 0%, transparent 45%),
+        linear-gradient(135deg, #0B171D, #050D11);
+    border-bottom: 1px solid var(--border);
+}
+
+.details-nav {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand > span:first-child,
+.brand-dot {
+    color: var(--green);
+}
+
+
+
+.details-heading {
+    padding-top: 60px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.team-identity {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 28px 0 20px;
+}
+
+.detail-flag {
+        width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 18px;
+}
+.detail-flag img {   
+        width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 8px;
+}
+
+.team-kicker {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.team-identity h1 {
+    margin: 5px 0;
+    font-size: clamp(35px, 6vw, 64px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.15;
+}
+
+.team-code {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.team-description {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.details-main {
+    padding: 45px 7% 70px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.stat-card {
+    padding: 25px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.stat-card h2 {
+    margin-top: 13px;
+    color: var(--green);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.info-section {
+    margin-top: 65px;
+}
+
+.info-section h2 {
+    margin: 12px 0 18px;
+    font-size: clamp(25px, 4vw, 35px);
+    font-weight: 700;
+}
+
+.info-section h2 span {
+    color: var(--green);
+}
+
+.info-section > p {
+    max-width: 900px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.achievements-section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.achievements-section li {
+    position: relative;
+    padding: 17px 18px 17px 43px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: #DCE5E8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.achievements-section li::before {
+    content: "✦";
+    position: absolute;
+    left: 17px;
+    color: var(--green);
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.player-card {
+    padding: 23px;
+    background: linear-gradient(145deg, #102129, #091319);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.player-card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+}
+
+.player-number {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.player-card h3 {
+    margin: 17px 0 6px;
+    font-size: 18px;
+}
+
+.player-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.bottom-navigation {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--green);
+    color: #05120D;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.back-button:hover {
+    background: #D4FFEA;
+    color: #05120D;
+    transform: translateY(-2px);
+}
+
+.details-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 7%;
+    border-top: 1px solid var(--border);
+}
+
+.details-footer p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .details-hero {
+        padding: 0 5% 45px;
+    }
+
+    .details-main {
+        padding: 35px 5% 50px;
+    }
+
+    .team-identity {
+        gap: 15px;
+    }
+
+    .detail-flag {
+    width: 100px;
+    height: 100px;
+    font-size: initial;
+    border-radius: 12px;
+}
+
+    .team-identity h1 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-card h2 {
+        font-size: 28px;
+    }
+
+    .achievements-section ul,
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-footer {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    
+}

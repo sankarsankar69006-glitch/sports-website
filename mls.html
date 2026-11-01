@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Major League Soccer (MLS) clubs, standings, marquee players, and match coverage on PlayZone.">
+
+    <title>Major League Soccer | PlayZone</title>
+
+    <link rel="icon" href="./assets/icon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="mls.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="mls-navbar">
+        <a href="index.html" class="brand">
+            <span>Play</span>Zone<span class="brand-dot">.</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="leagues.html">Leagues</a>
+            <a href="#clubs">Clubs</a>
+        </div>
+
+        <a href="leagues.html" class="back-link">
+            <i>←</i> All Leagues
+        </a>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="mls-hero">
+
+        <div class="hero-content">
+            <div class="hero-label">
+                <span class="live-dot"></span>
+                NORTH AMERICAN FOOTBALL
+            </div>
+
+            <h1>
+                MAJOR LEAGUE
+                <span>SOCCER.</span>
+            </h1>
+
+            <p>
+                Discover the clubs, cities and rivalries shaping
+                the future of football across North America.
+            </p>
+
+            <a href="index.html" class="hero-btn">
+    ← Back to Home
+</a>
+        </div>
+
+        <div class="hero-side">
+            <span class="hero-number">MLS</span>
+            <div class="hero-side-line"></div>
+            <p>ONE LEAGUE.<br>30 CLUBS.<br>ENDLESS PASSION.</p>
+        </div>
+
+        <div class="hero-watermark">SOCCER</div>
+    </header>
+
+
+    <!-- LEAGUE STATS -->
+    <section class="league-stats">
+        <div class="stat-item">
+            <span class="stat-number">30</span>
+            <span class="stat-label">CLUBS</span>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-number">02</span>
+            <span class="stat-label">CONFERENCES</span>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-number">1996</span>
+            <span class="stat-label">INAUGURAL SEASON</span>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-number">USA + CANADA</span>
+            <span class="stat-label">FOOTBALL ACROSS BORDERS</span>
+        </div>
+    </section>
+
+
+    <!-- CLUB SECTION -->
+    <main class="clubs-section" id="clubs">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">THE CLUB DIRECTORY</span>
+                <h2>Meet the <span>Clubs.</span></h2>
+                <p>Every city has a team. Every team has a story.</p>
+            </div>
+
+            <span class="club-count" id="clubCount">30 CLUBS</span>
+        </div>
+
+
+        <!-- SEARCH AND FILTER -->
+        <div class="club-controls">
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="clubSearch"
+                    placeholder="Search clubs or cities..."
+                >
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    All Clubs
+                </button>
+
+                <button class="filter-btn" data-filter="Eastern">
+                    Eastern
+                </button>
+
+                <button class="filter-btn" data-filter="Western">
+                    Western
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- CLUB CARDS -->
+        <div class="clubs-grid" id="clubsGrid"></div>
+
+        <div class="no-results" id="noResults">
+            No clubs found. Try another search.
+        </div>
+
+    </main>
+
+
+    <!-- CLUB DETAILS MODAL -->
+    <div class="club-modal" id="clubModal">
+        <div class="modal-content">
+
+            <button class="modal-close" id="modalClose" aria-label="Close">
+                &times;
+            </button>
+
+            <span class="modal-kicker">CLUB PROFILE</span>
+
+            <div class="modal-crest" id="modalCrest"></div>
+
+            <h2 id="modalName"></h2>
+
+            <p class="modal-city" id="modalCity"></p>
+
+            <div class="modal-info">
+                <div>
+                    <span>CONFERENCE</span>
+                    <strong id="modalConference"></strong>
+                </div>
+
+                <div>
+                    <span>HOME CITY</span>
+                    <strong id="modalLocation"></strong>
+                </div>
+
+                <div>
+                    <span>FOUNDED</span>
+                    <strong id="modalFounded"></strong>
+                </div>
+            </div>
+
+            <p class="modal-description" id="modalDescription"></p>
+
+            <button class="modal-done" id="modalDone">Back to Clubs</button>
+
+        </div>
+    </div>
+
+
+    <footer class="mls-footer">
+        <a href="index.html" class="brand">
+            <span>Play</span>Zone<span class="brand-dot">.</span>
+        </a>
+
+        <p>Every club. Every story. One football community.</p>
+
+        <span>© 2026 PlayZone</span>
+    </footer>
+
+
+    <script src="mls.js"></script>
+</body>
+</html>

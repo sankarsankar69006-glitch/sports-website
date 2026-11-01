@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest breaking football news, transfer updates, match reports, and trending sports stories on PlayZone.">
+    <title>News & Analysis | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+    <!-- Replace this navbar with your existing PlayZone navbar if you already have one -->
+    <nav class="navbar">
+        <a class="brand" href="index.html"><span class="brand-icon">🔥</span> PlayZone</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="players.html">Players</a>
+            <a class="active" href="news.html">News & Analysis</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="nav-tools">
+            <input id="searchInput" type="search" placeholder="Search news, teams..." aria-label="Search news">
+            <a class="profile" href="#" aria-label="Profile">♙</a>
+        </div>
+    </nav>
+
+    <header class="news-hero">
+        <div class="hero-copy">
+            <span class="eyebrow">PLAYZONE • FOOTBALL DESK</span>
+            <h1>News <span>&</span> Analysis</h1>
+            <p>Stories, transfers, tactical breakdowns and updates from world football and Indian football.</p>
+        </div>
+        <div class="hero-ball" aria-hidden="true">⚽</div>
+    </header>
+
+    <main class="page-wrap">
+        <div class="filter-bar" id="filterBar" aria-label="Filter news categories">
+            <button class="filter-btn active" data-category="All News">All News</button>
+            <button class="filter-btn" data-category="World Football">World Football</button>
+            <button class="filter-btn" data-category="Transfers">Transfers</button>
+            <button class="filter-btn" data-category="Match Analysis">Match Analysis</button>
+            <button class="filter-btn" data-category="Premier League">Premier League</button>
+            <button class="filter-btn" data-category="LaLiga">LaLiga</button>
+            <button class="filter-btn" data-category="Champions League">Champions League</button>
+            <button class="filter-btn" data-category="Indian Football">Indian Football</button>
+        </div>
+
+        <div class="feed-heading">
+            <div>
+                <span class="eyebrow">THE LATEST</span>
+                <h2 id="feedTitle">Latest Football Stories</h2>
+            </div>
+            <span class="feed-note">Select a topic to filter the feed</span>
+        </div>
+
+        <section id="newsList" class="news-feed" aria-live="polite"></section>
+        <p id="emptyState" class="empty-state" hidden>No articles match your search. Try another keyword or category.</p>
+
+        <p class="update-note">Editorial demo: headlines and analysis are sample summaries based on reported football developments. Check the linked sources for the latest confirmed details.</p>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html"><span class="brand-icon">🔥</span> PlayZone</a>
+        <p>Football. News. Analysis. Always.</p>
+        <div><a href="index.html">Home</a><a href="players.html">Players</a><a href="news.html">News & Analysis</a></div>
+        <small>© 2026 PlayZone. Fan-made football project.</small>
+    </footer>
+    <script src="news.js"></script>
+</body>
+</html>

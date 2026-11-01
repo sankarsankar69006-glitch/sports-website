@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed statistics, player squads, and tournament history for AFC Asian Cup national teams on PlayZone.">
+    <title>Team Details | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+    <link rel="stylesheet" href="./afc-asian-cup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="afc-page details-page">
+
+        <section class="details-hero">
+            <div class="details-glow"></div>
+
+            <div class="details-content">
+                <span class="section-kicker">AFC ASIAN CUP · NATIONAL TEAM</span>
+
+                <img id="detailFlag" src="" alt="Team Logo">
+
+                <span class="details-code" id="detailCode">QAT</span>
+
+                <h1 id="detailName">Qatar</h1>
+
+                <p class="details-nickname" id="detailNickname"></p>
+
+                <p class="details-description" id="detailDescription"></p>
+
+                <a href="./afc-asian-cup.html" class="back-home details-back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to AFC Asian Cup
+                </a>
+            </div>
+
+            <div class="details-watermark" id="detailWatermark">QAT</div>
+        </section>
+
+        <section class="team-info-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">TEAM PROFILE</span>
+                    <h2>Team <span>Overview</span></h2>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <article class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-earth-asia"></i></span>
+                    <p>Country</p>
+                    <h3 id="infoCountry">Qatar</h3>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <p>Capital</p>
+                    <h3 id="infoCapital">Doha</h3>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-layer-group"></i></span>
+                    <p>Tournament Group</p>
+                    <h3 id="infoGroup">Group A</h3>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-trophy"></i></span>
+                    <p>Asian Cup Titles</p>
+                    <h3 id="infoTitles">2</h3>
+                </article>
+            </div>
+
+
+
+
+            
+        </section>
+        <section class="team-history-section">
+    <div class="history-heading">
+        <span class="section-kicker">THE JOURNEY</span>
+        <h2>Team <span>History</span></h2>
+    </div>
+
+    <div class="history-card">
+        <div class="history-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div class="history-content">
+    <h3 id="historyTitle"></h3>
+    <p id="teamHistory"></p>
+</div>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <script src="./afc-asian-cup.js"></script>
+</body>
+</html>

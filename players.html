@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover world-class football legends and active superstars, their profiles, stats, and awards on PlayZone.">
+
+    <title>Football Players | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./players.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="players-navbar">
+    <a href="./index.html" class="players-logo">
+        Foot<span>ball</span>
+    </a>
+
+    <button class="players-menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="players-nav-links" id="navLinks">
+        <a href="./index.html">Home</a>
+        <a href="./leagues.html">Teams</a>
+        <a href="./players.html" class="active">Players</a>
+        <a href="./news.html">News</a>
+        <a href="./about.html">About</a>
+    </div>
+</nav>
+
+    <!-- HERO -->
+    <header class="players-hero">
+        <p class="section-label">THE GREATS OF FOOTBALL</p>
+
+        <h1>Legends Never <span>Fade.</span></h1>
+
+        <p class="hero-description">
+            From football legends who changed history to today's superstars.
+            Explore the greatest players and their incredible journeys.
+        </p>
+
+        <div class="players-hero-stats">
+            <div>
+                <h3>12</h3>
+                <p>Featured Players</p>
+            </div>
+
+            <div>
+                <h3>1956–2026</h3>
+                <p>Football Generations</p>
+            </div>
+
+            <div>
+                <h3>ONE</h3>
+                <p>Beautiful Game</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- PLAYERS SECTION -->
+    <main class="players-main">
+
+        <div class="players-heading">
+            <div>
+                <p class="section-label">PLAYER COLLECTION</p>
+                <h2>Discover <span>Players</span></h2>
+            </div>
+
+            <p id="playerCount" class="player-count">12 Players</p>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="players-toolbar">
+            <div class="player-search">
+                <span>&#128269;</span>
+                <input
+                    type="text"
+                    id="playerSearch"
+                    placeholder="Search player, country or club..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <select id="playerSort" aria-label="Sort players">
+                <option value="default">Featured Players</option>
+                <option value="oldest">Career Start: Oldest First</option>
+                <option value="newest">Career Start: Newest First</option>
+                <option value="az">Name: A to Z</option>
+            </select>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="player-filters">
+            <button class="filter-btn active" data-filter="all">All Players</button>
+            <button class="filter-btn" data-filter="legend">Legends</button>
+            <button class="filter-btn" data-filter="current">Current Stars</button>
+            <button class="filter-btn" data-filter="forward">Forwards</button>
+            <button class="filter-btn" data-filter="midfielder">Midfielders</button>
+            <button class="filter-btn" data-filter="goalkeeper">Goalkeepers</button>
+            <button class="filter-btn" data-filter="defender">Defenders</button>
+        </div>
+
+        <!-- CARDS GENERATED USING JAVASCRIPT -->
+        <section class="players-grid" id="playersGrid"></section>
+
+        <div id="noPlayers" class="no-players" hidden>
+            <h3>No players found</h3>
+            <p>Try another player name, club or country.</p>
+        </div>
+
+    </main>
+
+    <footer class="players-footer">
+        <a href="./index.html" class="back-home">← Back to Home</a>
+        <p>© 2026 PlayZone. Celebrating the beautiful game.</p>
+    </footer>
+
+    <script src="./players.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed team profiles, squad rosters, and Copa América statistics for competing nations on PlayZone.">
+
+    <title>Team Details | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+
+    <link rel="stylesheet" href="./copa-details.css">
+</head>
+<body>
+
+    <main class="details-page">
+
+        <!-- HERO SECTION -->
+        <section class="team-hero" id="teamHero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">COPA AMÉRICA / NATIONAL TEAM</p>
+
+                <div class="team-heading">
+
+                    <div>
+                        <span class="team-code" id="teamCode"></span>
+                        <h1 id="teamName">Team Name</h1>
+                        <p id="teamNickname"></p>
+                        <p class="team-description" id="teamDescription"></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TEAM STATISTICS -->
+        <section class="content-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">TEAM PROFILE</p>
+                <h2>Team Overview</h2>
+            </div>
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+                    <span class="stat-icon">🏆</span>
+                    <p>Copa América Titles</p>
+                    <h3 id="copaTitles">0</h3>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">🌍</span>
+                    <p>World Cup Titles</p>
+                    <h3 id="worldCupTitles">0</h3>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">📅</span>
+                    <p>Founded</p>
+                    <h3 id="teamFounded">-</h3>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">⚽</span>
+                    <p>Last Copa Title</p>
+                    <h3 id="lastTitle">-</h3>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- HISTORY -->
+        <section class="content-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">THE JOURNEY</p>
+                <h2>Team History</h2>
+            </div>
+
+            <div class="history-card">
+                <div class="history-line"></div>
+
+                <div class="history-content">
+                    <h3 id="historyTitle">A Football Legacy</h3>
+                    <p id="teamHistory"></p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+        <section class="content-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">MOMENTS OF GLORY</p>
+                <h2>Major Achievements</h2>
+            </div>
+
+            <div class="achievement-grid" id="achievementList"></div>
+
+        </section>
+
+
+        <!-- LEGENDARY PLAYERS -->
+        <section class="content-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">FOOTBALL LEGENDS</p>
+                <h2>Famous Players</h2>
+                <p class="section-description">
+                    Legendary players who have represented the national team.
+                </p>
+            </div>
+
+            <div class="players-grid" id="playersList"></div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="details-footer">
+            <a href="copa-america.html" class="back-home">
+                <span>&larr;</span> Back to Copa América
+            </a>
+
+            <p>PlayZone &copy; 2026 | Football Lives Here</p>
+        </footer>
+
+    </main>
+
+    <script src="./copa-details.js"></script>
+</body>
+</html>

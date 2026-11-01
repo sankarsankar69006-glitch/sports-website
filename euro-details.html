@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed statistics, star players, and championship records for UEFA Euro national teams on PlayZone.">
+
+    <title>Team Details | PlayZone</title>
+    <link rel="icon" href="./assets/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./euro-details.css">
+</head>
+<body>
+
+    <header class="details-hero">
+
+        <nav class="details-nav">
+            <a href="index.html" class="brand">
+                <span>Play</span>Zone<span class="brand-dot">.</span>
+            </a>
+
+        </nav>
+
+        <div class="details-heading">
+            <span class="eyebrow">UEFA EUROPEAN CHAMPIONSHIP</span>
+
+            <div class="team-identity">
+                <div id="detailFlag" class="detail-flag">⚽</div>
+
+                <div>
+                    <p class="team-kicker">NATIONAL TEAM</p>
+                    <h1 id="detailName">Team Name</h1>
+                    <p id="detailCode" class="team-code">TEAM</p>
+                </div>
+            </div>
+
+            <p id="detailDescription" class="team-description"></p>
+        </div>
+    </header>
+
+
+    <main class="details-main">
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span>EURO TITLES</span>
+                <h2 id="detailTitles">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <span>FOOTBALL FEDERATION</span>
+                <h2 id="detailFounded">—</h2>
+            </article>
+
+            <article class="stat-card">
+                <span>EURO 2024</span>
+                <h2 id="detailResult">—</h2>
+            </article>
+        </section>
+
+
+        <section class="info-section">
+            <span class="eyebrow">TEAM PROFILE</span>
+            <h2>History & <span>Legacy</span></h2>
+            <p id="detailHistory"></p>
+        </section>
+
+
+        <section class="info-section achievements-section">
+            <span class="eyebrow">TOURNAMENT RECORD</span>
+            <h2>Major <span>Achievements</span></h2>
+            <ul id="detailAchievements"></ul>
+        </section>
+
+
+        <section class="info-section">
+            <span class="eyebrow">FOOTBALL LEGENDS</span>
+            <h2>Famous <span>Players</span></h2>
+            <div id="detailPlayers" class="players-grid"></div>
+        </section>
+
+
+        <div class="bottom-navigation">
+            <a href="uefa-euro.html" class="back-button">
+                ← Back to UEFA Euro
+            </a>
+        </div>
+
+    </main>
+
+
+    <footer class="details-footer">
+        <a href="index.html" class="brand">
+            <span>Play</span>Zone<span class="brand-dot">.</span>
+        </a>
+        <p>Passion. Pride. European Football.</p>
+    </footer>
+
+    <script src="./euro-details.js"></script>
+</body>
+</html>
