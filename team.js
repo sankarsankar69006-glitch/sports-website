@@ -40,7 +40,7 @@ const teams = [
         founded: 1892,
         titles: 6,
         achievement: "European Cup / Champions League titles",
-        image: "./assets/Teams/bayern-munich.jpg",
+        image: "./assets/Teams/liverpool.jpg",
         
         featured: "EUROPEAN GIANTS",
         searchNames: "liverpool lfc"
